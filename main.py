@@ -14,6 +14,30 @@ while True:
             print(f"{bot_name}: The sum is {num1 + num2}")
         except ValueError:
             print(f"{bot_name}: Please enter valid numbers.")
+    elif user_input in ["-", "subtract"]:
+        try:
+            num1 = float(input("Enter first number: "))
+            num2 = float(input("Enter second number: "))
+            print(f"{bot_name}: The difference is {num1 - num2}")
+        except ValueError:
+            print(f"{bot_name}: Please enter valid numbers.")
+    elif user_input in ["*", "multiply"]:
+        try:
+            num1 = float(input("Enter first number: "))
+            num2 = float(input("Enter second number: "))
+            print(f"{bot_name}: The product is {num1 * num2}")
+        except ValueError:
+            print(f"{bot_name}: Please enter valid numbers.")
+    elif user_input in ["/", "divide"]:
+        try:
+            num1 = float(input("Enter first number: "))
+            num2 = float(input("Enter second number: "))
+            if num2 == 0:
+                print(f"{bot_name}: Cannot divide by zero.")
+            else:
+                print(f"{bot_name}: The quotient is {num1 / num2}")
+        except ValueError:
+            print(f"{bot_name}: Please enter valid numbers.")
     else:
         print(f"{bot_name}: I'm sorry, I didn't understand that. Can you please rephrase?")
         
